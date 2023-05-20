@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+
+true
+and conda activate base
+
+and rm -rf (conda info --base)/envs/openai_forwarder/
+and conda env remove --name openai_forwarder
+
+and conda create --yes --name openai_forwarder python
+and conda activate openai_forwarder
+and pip install --upgrade --requirement requirements.txt

@@ -1,0 +1,7 @@
+colored
+flask
+flask-cors
+jupyter
+python-dotenv
+python-dotenv
+requests

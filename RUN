@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+true
+and conda activate openai_forwarder
+and ipython3 openai_forwarder.py
