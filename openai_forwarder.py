@@ -13,6 +13,10 @@ flask_cors.CORS(app)
 def home():
   request_data = flask.request.get_json()
   openai_api_key = os.getenv("OPENAI_API_KEY")
+  if openai_api_key is None:
+    print()
+    print("NO OPENAI_API_KEY specified. Please get the key from: https://platform.openai.com/account/api-keys\nThen make an .env file and specify the key like so:\nOPENAI_API_KEY=sk-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv")
+    print()
   headers = {
     "Authorization": f"Bearer {openai_api_key}",
     "Content-Type": "application/json"
